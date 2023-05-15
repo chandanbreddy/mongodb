@@ -1,7 +1,9 @@
 # Mongo DB
 <br>
 <div style="width:300px; height:200px"> 
+
 ![image My-Sql](/images/mdb.png)
+
 </div>
 
 <div style="font-size:25px; text-align:justify;"> 
@@ -97,7 +99,7 @@
 
 #### Difference between sql and nosql
 
-I
+<div style="font-size:20px; text-align:justify;"> 
 
 |                              SQL                              |                              NoSQL                             |
 |:-------------------------------------------------------------:|:--------------------------------------------------------------:|
@@ -109,6 +111,7 @@ I
 | Follows ACID property                                         | Follows CAP(consistency, availability, partition tolerance)    |
 | Examples: MySQL, PostgreSQL, Oracle, MS-SQL Server, etc       | Examples: MongoDB, GraphQL, HBase, Neo4j, Cassandra, etc       |
 
+</div>
 
 ### Json
 
@@ -151,12 +154,15 @@ I
 ![mongodb](/images/MongoDB.png)
 </div>
 
+<div style="font-size:20px; text-align:justify;"> 
+
 {{1}} [What is MongoDB](#What-is-Mongodb)
 
 {{2}} [History of Mongodb](#History-of-Mongodb)
 
 {{3}} [MongoDB Installation](MongoDB-Installation)
 
+</div>
 
 
 #### What is MongoDB 
@@ -175,7 +181,9 @@ I
 * MongoDB is an open-source project, and there are many third-party tools and libraries available for working with MongoDB data. 
 
 </div>
+
 <br>
+
 <div style="font-size:20px; text-align:justify;"> 
 ![compomdb](/images/compomdb.jpg)
 
@@ -219,6 +227,7 @@ I
 ##### Windows 
 
 <div style="font-size:20px; text-align:justify;"> 
+
 * Step 1: Go to MongoDB Download Center to download MongoDB Community Server.
 ![mongodb](/images/win/1.png)
 
@@ -344,6 +353,8 @@ check the service's status by using the below command
 
 ## Working on mongodb
 
+<div style="font-size:20px; text-align:justify;"> 
+
 1. [Data types in MongoDB](#Data-types-in-MongoDB)
 
 2. [MongoDB data Modeling ](#MongoDB-data-Modeling)
@@ -357,6 +368,8 @@ check the service's status by using the below command
 6. [Collections](#Collections)
 
 7. [Documents](#Documents)
+
+</div>
 
 ### Data types in MongoDB
 
@@ -398,6 +411,8 @@ check the service's status by using the below command
 
 ### MongoDB data Modeling 
 
+<div style="font-size:20px; text-align:justify;"> 
+
 * Always design schema according to user requirements.
 * Do join on write operations not on read operations.
 * Objects which you want to use together, should be combined into one document. Otherwise they should  be separated (make sure that there should not be need of joins).
@@ -421,15 +436,37 @@ For example:
 
 ![schema](/images/mapping.png)
 
+</div>
+
 ### Operations on Database
 
-#### Creating database
+<div style="font-size:20px; text-align:justify;"> 
 
-# Note all the demontration are done using shell 
+1. [Creating Database](#Creating-database)
+
+2. [Listing the Databases ](Listing-the-Databases)
+
+3. [Dropping the databases](Dropping-the-databases)
+
+</div>
+
+
+#### Creating database
+<div style="font-size:20px; text-align:justify;"> 
+
+* Note all the demontration are done using shell 
 
 * You can use MongoDB Shell or MongoDB Compass to create a new database
 
+1. [Shell](#shell)
+2. [Compass](#compass)
+
+</div>
+
 ###### Shell:
+
+<div style="font-size:20px; text-align:justify;"> 
+
 ```
  use <database-name>
 
@@ -438,14 +475,22 @@ For example:
 
 * MongoDB will automatically switch to the newly created database. Notice that it promts to <br> <br> ``` humanResourceDB>    ``` 
 
+</div>
+
 ###### Compass:
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * You can create a new database using MongoDB Compass. For that, open Compass and connect with your local or remote database. Once it connects with the MongoDB server, click on the top "CREATE DATABASE" button which will open the popup window, as shown below.
 
 ![compassdb](/images/compassdb.png) 
 
+</div>
 
 #### Listing the Databases 
+
+<div style="font-size:20px; text-align:justify;"> 
 
 To List all the databases, use the "show dbs" command, as shown below.
 
@@ -459,8 +504,11 @@ show dbs
 
 ![dbvlist](/images/listdb.png)
 
+</div>
 
 #### Dropping the databases
+
+<div style="font-size:20px; text-align:justify;"> 
 
 To delete a database, use the 
 
@@ -474,17 +522,23 @@ method which deletes a current database.
 ![dropdb](/images/dropdb.png)
 
 * Note: Method names are case sensitive.
+</div>
 
 ### Collections
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * A collection is a grouping of MongoDB documents. Documents within a collection can have different fields. A collection is the equivalent of a table in a relational database system. A collection exists within a single database.
 
 * Example: 
 ![collection](/images/collection.svg)
 
-
+</div>
 
 #### Creating collections
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * A collection in MongoDB is similar to a table in RDBMS. MongoDB collections do not enforce schemas. Each MongoDB collection can have multiple documents. A document is equilant to row in a table in RDBMS.
 
@@ -499,8 +553,12 @@ command. The following creates a new employees collection in the current databas
 * Example:
 ![createcollection](/images/createcoll.png)
 
+</div>
 
 #### Show collections
+
+<div style="font-size:20px; text-align:justify;"> 
+
  Use the
 
 ```
@@ -516,14 +574,20 @@ commands to list all the collections in a database.
  ![showcoll](/images/showcoll.png)
 
 
-
+</div>
 
 #### Drop Collections
-Use the
+
+
+<div style="font-size:20px; text-align:justify;"> 
+
+* In MongoDB, db.collection.drop() method is used to drop a collection from a database. It completely removes a collection from the database and does not leave any indexes associated with the dropped collections.
 
 ```
-db.<collection-name>.drop()
+db.COLLECTION_NAME.drop()  
 ```
+
+
 
 commands to delete the collections.
 <br>
@@ -533,8 +597,13 @@ commands to delete the collections.
 
  ![showcoll](/images/dropcoll.png)
 
+</div>
 
 #### Inserting collections
+
+
+<div style="font-size:20px; text-align:justify;"> 
+
 * MongoDB provides the following methods to insert documents into a collection:
 
 ```
@@ -542,7 +611,14 @@ insertOne() - Inserts a single document into a collection.
 insert() - Inserts one or more documents into a collection.
 insertMany() - Insert multiple documents into a collection.
 ```
+
+</div>
+
+
 ###### InsertOne() 
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * This method to insert a single document in a collection.
 
@@ -573,7 +649,15 @@ Output :
 
 ```
 
+![insertone](/images/insert.png)
+
+</div>
+
+
 ###### Insert()
+
+<div style="font-size:20px; text-align:justify;"> 
+
 * The db.<collection>.insert() method inserts one document or an array of documents into a collection.
 
 * Note : Using Insert() one or multiple collections can be intserted at a time. 
@@ -585,7 +669,14 @@ db.collection.insert(
 )
 ```
 
+![insertone](/images/insertone.png)
+
+</div>
+
 ###### InsertMany()
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * Using InsertMany(), multiple documents into a collection by passing an array of document collections
 
@@ -622,24 +713,29 @@ Output:
 }
 
 ```
-#### Drop collection
-* In MongoDB, db.collection.drop() method is used to drop a collection from a database. It completely removes a collection from the database and does not leave any indexes associated with the dropped collections.
 
-```
-db.COLLECTION_NAME.drop()  
-```
+![insertmany](/images/insertmany.png)
 
-
+</div>
 
 #### pretty()
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * pretty() method specifies the cursor object to display the Mongo query results in an easy-to-read attractive format
 
 ```
 > db.collection_name.find(<query_string>).pretty()
 ```
+![pretty](/images/pretty.png)
+
+</div>
 
 #### Other operations on Collections
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 | Name | Description |
 |:---:|:---:|
@@ -688,30 +784,43 @@ db.COLLECTION_NAME.drop()
 | db.collection.watch() | Establishes a Change Stream on a collection. |
 | db.collection.validate() | Performs diagnostic operations on a collection. |
 
-
+</div>
 
 ### Documents
 
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * Collections are just like tables in relational databases, they also store data, but in the form of documents. A single database is allowed to store multiple collections.  
 
 ![doc](/images/doc.png)
 
+</div>
+
 #### Naming Restrictions
+
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * Collection name must starts with an underscore or a character.
 * Collection name does not contain $, empty string, null character and does not begin with system. prefix.
 * The maximum length of the collection name is 120 bytes(including the database name, dot separator, and the collection name).
 
+</div>
+
 #### JSON to BSON
 
+<div style="font-size:20px; text-align:justify;"> 
 
 ![jsontobson](/images/json-vs-bson.png)
 
 * MongoDB stores data in key-value pairs as a BSON document. BSON is a binary representation of a JSON document that supports more data types than JSON. MongoDB drivers convert JSON document to BSON data.
 
+</div>
 
 #### Points to be Noted 
+
+<div style="font-size:20px; text-align:justify;"> 
 
 * MongoDB reserves _id name for use as a unique primary key field that holds ObjectId type. However, you are free to give any name you like with any data type other than the array.
 * A document field name cannot be null but the value can be.
@@ -723,6 +832,8 @@ db.COLLECTION_NAME.drop()
 * MogoDB keeps the order of the fields except _id field which is always the first field.
 * MongoDB collection can store documents with different fields. It does not enforce any schema.
 
+</div>
+
 ### Example 
 
 
@@ -731,6 +842,7 @@ db.COLLECTION_NAME.drop()
 * Lets consider Employee Database:
 
 # ER Diagram
+
 
 ```
 
